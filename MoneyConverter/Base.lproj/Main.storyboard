@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoneyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPz-QR-DYb">
+                                <rect key="frame" x="100" y="167" width="214" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость 1 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CV-sO-IJ4">
+                                <rect key="frame" x="90" y="108" width="234" height="36"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-Yd-4H1">
+                                <rect key="frame" x="172.5" y="361" width="69" height="47"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9H-8S-mDr">
+                                <rect key="frame" x="173" y="488" width="68" height="47"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fu3-1O-yKm">
+                                <rect key="frame" x="48" y="433" width="318" height="31"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <connections>
+                                    <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="L2B-xc-0bO"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="2CV-sO-IJ4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="86F-SS-Img"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fu3-1O-yKm" secondAttribute="trailing" constant="50" id="BQf-l0-Nh7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sPz-QR-DYb" secondAttribute="trailing" constant="100" id="CQp-A8-5fg"/>
+                            <constraint firstItem="g9H-8S-mDr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Caz-3n-3XA"/>
+                            <constraint firstItem="g9H-8S-mDr" firstAttribute="top" secondItem="Fu3-1O-yKm" secondAttribute="bottom" constant="25" id="D4P-yA-g50"/>
+                            <constraint firstItem="Fu3-1O-yKm" firstAttribute="top" secondItem="Ecy-Yd-4H1" secondAttribute="bottom" constant="25" id="I6N-02-k4g"/>
+                            <constraint firstItem="sPz-QR-DYb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="KeO-g4-xtB"/>
+                            <constraint firstItem="sPz-QR-DYb" firstAttribute="top" secondItem="2CV-sO-IJ4" secondAttribute="bottom" constant="23" id="Lme-Df-RY0"/>
+                            <constraint firstItem="Ecy-Yd-4H1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O8l-zN-IKW"/>
+                            <constraint firstItem="sPz-QR-DYb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TxM-Vt-yIy"/>
+                            <constraint firstItem="2CV-sO-IJ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Umv-1W-veW"/>
+                            <constraint firstItem="Fu3-1O-yKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="YcJ-rp-mZ9"/>
+                            <constraint firstItem="Fu3-1O-yKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f3t-bh-Peq"/>
+                            <constraint firstItem="Fu3-1O-yKm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i5E-hH-c3c"/>
+                            <constraint firstItem="Fu3-1O-yKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yJt-Y8-I62"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputPrice" destination="sPz-QR-DYb" id="cFR-lK-gyi"/>
+                        <outlet property="labelRub" destination="g9H-8S-mDr" id="sng-As-UzL"/>
+                        <outlet property="labelUsd" destination="Ecy-Yd-4H1" id="e1t-Qz-qfd"/>
+                        <outlet property="slider" destination="Fu3-1O-yKm" id="nUj-Qm-bcQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.375" y="3.1690140845070425"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

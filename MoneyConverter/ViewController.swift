@@ -21,28 +21,16 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
     var price: Float = 0
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        guard let price = self.price else {return}
-//        inputPrice.text = "\(price)"
-//
-//    }
-    
-    
     
     @IBAction func sliderChanger(_ sender: UISlider) {
         price = Float(inputPrice.text!)!
         
         let valueUsd = Float(sender.value)
-        labelUsd.text = "\(valueUsd) USD"
+        labelUsd.text = "\(String(format: "%.2f", valueUsd)) USD"
         
         let valueRub = Float(sender.value * Float(price))
-        labelRub.text = "\(valueRub) RUB"
+        labelRub.text = "\(String(format: "%.2f", valueRub)) RUB"
     }
     
     

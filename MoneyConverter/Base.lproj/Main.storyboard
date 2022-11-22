@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,14 +40,14 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fu3-1O-yKm">
                                 <rect key="frame" x="48" y="433" width="318" height="31"/>
-                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <color key="tintColor" red="0.95209461449999999" green="0.58536106349999995" blue="0.34200459719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="L2B-xc-0bO"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.33515000340000001" green="0.77038198710000005" blue="0.71452659370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2CV-sO-IJ4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="86F-SS-Img"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fu3-1O-yKm" secondAttribute="trailing" constant="50" id="BQf-l0-Nh7"/>
@@ -79,12 +78,4 @@
             <point key="canvasLocation" x="24.375" y="3.1690140845070425"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
